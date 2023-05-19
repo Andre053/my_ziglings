@@ -1,0 +1,19 @@
+# Exercises Takeaway
+
+1. Functions must be public, private, etc.; main must be public
+2. Libraries are imported and saved as variables; use @import()
+3. Types can be const, unsigned with a number (u8, u16, etc.), signed with a number (i8, etc.)
+4. Arrays have the form [<num>]<type>{<elements>}, use num "_" for inference. Arrays have functions like len 
+5. Arrays have special operators: "++" to concatenate, "**" to repeat. These are evaluated at comptime
+6. String literals are arrays of bytes, almost the same as an array of characters. Characters have single quotes, strings have double quotes. Can use array operators on string literals
+7. Put "\\" before each line of a multiline string, end with ";" on a separate line 
+8. Quiz 1: usize depends on the target CPU arch (idiomatic type for array indexing). Set memory to undefined to use later
+9. Zig has usual comparison operators. If statement only accepts boolean values
+10. If statements are valid expressions, similar to a ternary. Form is: if (<condition>) <val1> else <val2>;
+11. While loops require booleans 
+12. While loops have an optional 'continue expression' which always runs at the end of the loop or when 'continue' is invoked. Use the form while (<condition>) : (<continue expression>) {}
+13. Use continue statements to start the loop again and invoke the 'continue expression'
+14. Use a 'break' statement to exit a loop immediately
+15. For loops execute code for each element of an array. Use the form: for (<items>) |<item>| {}. For loops also work on "slices" (dynamic array?)
+16. For loops can use "index" of the iteration, requiring a second condition: for (<items>, <value>) |<item>, <index>| {}. The value doesn't seem to be needed
+17. Quiz 2: Issue with import statement and loop, function definition improper syntax, format print needed to print index when value isn't mod 3 or 5 
